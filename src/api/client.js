@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api',
+  baseURL: 'https://msgstr-mills-references-puzzle.trycloudflare.com/api',
   headers: { 'Content-Type': 'application/json' },
-  withCredentials: true, // backend sets an httpOnly "token" cookie
+  withCredentials: true,
   timeout: 15000,
 });
 
