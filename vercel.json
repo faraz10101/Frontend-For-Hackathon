@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://msgstr-mills-references-puzzle.trycloudflare.com/api/:path*"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'https://msgstr-mills-references-puzzle.trycloudflare.com/api',
+  baseURL: '/api',
   headers: { 'Content-Type': 'application/json' },
   withCredentials: true,
   timeout: 15000,
