@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/api/:path*", "destination": "https://requires-parking-tennessee-merely.trycloudflare.com" },
+    { "source": "/api/:path*", "destination": "https://requires-parking-tennessee-merely.trycloudflare.com/api/:path*" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
