@@ -7,6 +7,8 @@ import { Input } from '../components/ui/input';
 import { Card } from '../components/ui/card';
 import { Spinner, ErrorBox, PageShell } from '../components/common/Bits';
 import { useAuth } from '../context/AuthContext';
+import LiveScamSearch from '../components/home/LiveScamSearch';
+import LiveFeed from '../components/home/LiveFeed';
 
 const fmtDay = (iso) => new Date(iso + 'T00:00:00').toLocaleDateString(undefined, { weekday: 'short' });
 const timeAgo = (d) => {
@@ -79,6 +81,9 @@ export default function HomePage() {
         </form>
       </div>
 
+      <LiveFeed />
+      <LiveScamSearch />
+
       {loading && !feed ? <Spinner label="Loading today's feed..." /> : error ? <ErrorBox onRetry={load}>{error}</ErrorBox> : feed && (
         <div className="space-y-4">
           {/* Bulletin */}
@@ -96,7 +101,7 @@ export default function HomePage() {
             )}
             <div className="mt-5 flex flex-wrap gap-2">
               <Link to="/check"><Button className="bg-white text-indigo-700 hover:bg-indigo-50">Check a message</Button></Link>
-              <Link to="/report"><Button variant="outline" className="border-white/40 text-white hover:bg-white/10 hover:text-white">Report a scam</Button></Link>
+              <Link to="/report"><Button variant="outline" className="border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white">Report a scam</Button></Link>
             </div>
           </div>
 
